@@ -1,4 +1,5 @@
 from mcp.server.fastmcp import FastMCP
+from mcp.server.fastmcp.prompts import base
 from typing import List, Dict
 from datetime import datetime
 import uuid
@@ -95,5 +96,13 @@ def search_notes_by_date(user_id: str, date: str) -> str:
 def get_greeting(name: str) -> str:
     return f"Hello, {name}! How can I assist you with your notes today?"
 
+@mcp.prompt()
+def summarize_notes(user_id: str) -> list[base.Message]:
+ 
+    return [
+        base.SystemMessage("You are a concise note-summarizer."),
+        base.UserMessage(f"You need to summarize the notes for {user_id}:"),
+        base.AssistantMessage("Please give me a bullet-point summary and provide the date in literal form like Jan 01 2025.")
+    ]
 if __name__ == "__main__":
     mcp.run()

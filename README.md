@@ -75,6 +75,8 @@ Once installed, you can interact with the note manager through Claude Desktop by
 - "Show notes from [date]"
 
 Claude will use the appropriate tools to manage your notes.
+## Launch MCP Inspector 
+ uv run mcp dev main.py
 
 ## Note
 
