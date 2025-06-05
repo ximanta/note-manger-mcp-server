@@ -1,6 +1,7 @@
 {
 "servers": {
-    "MCP-Atlassian-JIRA": {      "command": "uv",
+    "MCP-Atlassian-JIRA": {      
+      "command": "uv",
       "args": [
         "run",
         "mcp-atlassian",
@@ -13,6 +14,7 @@
        
       ]
     }
+    
 }
   
 }
